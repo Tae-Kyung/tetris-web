@@ -38,22 +38,22 @@
 
         .game-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 700px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 900px;
         }
 
         .game-card {
             background: #0f0f23;
             border: 3px solid #4a4a6a;
             border-radius: 20px;
-            padding: 40px;
+            padding: 30px 20px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             color: #fff;
-            min-width: 280px;
+            min-width: 200px;
         }
 
         .game-card:hover {
@@ -63,15 +63,15 @@
         }
 
         .game-icon {
-            font-size: 80px;
-            margin-bottom: 20px;
+            font-size: 60px;
+            margin-bottom: 15px;
             display: block;
         }
 
         .game-title {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #fff;
         }
 
@@ -99,13 +99,46 @@
             color: #ff6b6b;
         }
 
+        .snake-card:hover {
+            border-color: #00ff00;
+            box-shadow: 0 20px 40px rgba(0, 255, 0, 0.3);
+        }
+
+        .snake-card:hover .game-title {
+            color: #00ff00;
+        }
+
+        .breakout-card:hover {
+            border-color: #ff8800;
+            box-shadow: 0 20px 40px rgba(255, 136, 0, 0.3);
+        }
+
+        .breakout-card:hover .game-title {
+            color: #ff8800;
+        }
+
+        .pacman-card:hover {
+            border-color: #ffff00;
+            box-shadow: 0 20px 40px rgba(255, 255, 0, 0.3);
+        }
+
+        .pacman-card:hover .game-title {
+            color: #ffff00;
+        }
+
         footer {
             margin-top: 60px;
             color: #666;
             font-size: 14px;
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 900px) {
+            .game-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
             .game-grid {
                 grid-template-columns: 1fr;
             }
@@ -125,8 +158,7 @@
             <span class="game-icon">🎮</span>
             <div class="game-title">테트리스</div>
             <p class="game-description">
-                블록을 쌓아 줄을 완성하세요!<br>
-                클래식 퍼즐 게임
+                블록을 쌓아 줄을 완성하세요!
             </p>
         </a>
 
@@ -134,8 +166,31 @@
             <span class="game-icon">💣</span>
             <div class="game-title">지뢰찾기</div>
             <p class="game-description">
-                지뢰를 피해 모든 칸을 열어라!<br>
-                논리 퍼즐 게임
+                지뢰를 피해 모든 칸을 열어라!
+            </p>
+        </a>
+
+        <a href="snake.html" class="game-card snake-card">
+            <span class="game-icon">🐍</span>
+            <div class="game-title">스네이크</div>
+            <p class="game-description">
+                뱀을 조종해 먹이를 먹어라!
+            </p>
+        </a>
+
+        <a href="breakout.html" class="game-card breakout-card">
+            <span class="game-icon">🧱</span>
+            <div class="game-title">벽돌깨기</div>
+            <p class="game-description">
+                공으로 모든 벽돌을 부숴라!
+            </p>
+        </a>
+
+        <a href="pacman.html" class="game-card pacman-card">
+            <span class="game-icon">👻</span>
+            <div class="game-title">팩맨</div>
+            <p class="game-description">
+                유령을 피해 점을 모아라!
             </p>
         </a>
     </div>
